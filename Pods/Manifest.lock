@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.9.0)
+  - OpenGraph (1.2.0)
+  - SDWebImage (3.8.3):
+    - SDWebImage/Core (= 3.8.3)
+  - SDWebImage/Core (3.8.3)
+  - SwiftyJSON (5.0.0)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - OpenGraph
+  - SDWebImage (~> 3.8)
+  - SwiftyJSON
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - OpenGraph
+    - SDWebImage
+    - SwiftyJSON
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  OpenGraph: b467158726b640d3c08083ab830be955c4ad6259
+  SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 0dff812f0912520f5f70a5aa896465e6bca7419e
+
+COCOAPODS: 1.8.3
