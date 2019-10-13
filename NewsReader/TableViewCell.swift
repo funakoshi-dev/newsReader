@@ -36,7 +36,6 @@ class TableViewCell: UITableViewCell {
         didSet {
             // URLのOGP情報取得
             OpenGraph.fetch(url: URL(string: link)!) { og, error in
-                g
                 // OGP情報から取得した画像URLを取得
                 let imageUrl = URL(string:(og?[.image])!)
                 self.setThumbnailWithFadeInAnimation(imageUrl: imageUrl!)
