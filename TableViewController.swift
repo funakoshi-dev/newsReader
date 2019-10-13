@@ -41,10 +41,10 @@ class TableViewController: UITableViewController
             let json = JSON(response.result.value as Any)
             json["articles"].forEach{(_, data) in
                 let article: [String: String] = [
-                    "title": data["title"].string!,
-                    "date": data["publishedAt"].string!,
-                    "link": data["url"].string!,
-                    "image":data["urlToImage"].string!,
+                    "title": data["title"].stringValue,
+                    "date": data["publishedAt"].stringValue,
+                    "link": data["url"].stringValue,
+                    "image":data["urlToImage"].stringValue,
                     ]
                 self.articles.append(article)
                 print("articles:\(self.articles)")

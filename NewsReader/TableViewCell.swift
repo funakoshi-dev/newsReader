@@ -35,10 +35,16 @@ class TableViewCell: UITableViewCell {
     var link: String! {
         didSet {
             // URLのOGP情報取得
-            OpenGraph.fetch(url: URL(string: link)!) { og, error in
-                // OGP情報から取得した画像URLを取得
-                let imageUrl = URL(string:(og?[.image])!)
-                self.setThumbnailWithFadeInAnimation(imageUrl: imageUrl!)
+            OpenGraph.fetch(url: URL(string: link)!) { result in
+                switch result {
+                case .success(let og):
+                  if let fetchUrl = og[.image] {
+                    let imageUrl = URL(string:(fetchUrl))
+                    self.setThumbnailWithFadeInAnimation(imageUrl: imageUrl)
+                  }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }
