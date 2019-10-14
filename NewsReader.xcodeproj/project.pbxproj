@@ -56,7 +56,7 @@
 		313DE908235457320095D22C /* swvader03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swvader03.wav; sourceTree = "<group>"; };
 		313DE909235457320095D22C /* Lightsaber Turn On.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Lightsaber Turn On.wav"; sourceTree = "<group>"; };
 		313DE90A235457320095D22C /* R2D2-yeah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "R2D2-yeah.wav"; sourceTree = "<group>"; };
-		317606A4234F90860088C065 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		317606A4234F90860088C065 /* SW NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SW NewsReader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		317606A7234F90860088C065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317606A9234F90860088C065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		317606AB234F90860088C065 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		317606A5234F90860088C065 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				317606A4234F90860088C065 /* NewsReader.app */,
+				317606A4234F90860088C065 /* SW NewsReader.app */,
 				317606BA234F90870088C065 /* NewsReaderTests.xctest */,
 				317606C5234F90870088C065 /* NewsReaderUITests.xctest */,
 			);
@@ -233,7 +233,7 @@
 			);
 			name = NewsReader;
 			productName = NewsReader;
-			productReference = 317606A4234F90860088C065 /* NewsReader.app */;
+			productReference = 317606A4234F90860088C065 /* SW NewsReader.app */;
 			productType = "com.apple.product-type.application";
 		};
 		317606B9234F90870088C065 /* NewsReaderTests */ = {
@@ -647,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.gsacademy.NewsReader;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SW NewsReader";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -666,7 +666,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.gsacademy.NewsReader;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SW NewsReader";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
