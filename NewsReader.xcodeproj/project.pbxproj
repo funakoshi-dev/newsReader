@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		142FDFF14E9B586A128044D0 /* Pods_NewsReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A97A9DED689E1F60DBD3E3 /* Pods_NewsReader.framework */; };
+		313DE903235457060095D22C /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313DE902235457060095D22C /* Starjedi.ttf */; };
+		313DE90B235457320095D22C /* yodalaughing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 313DE905235457320095D22C /* yodalaughing.wav */; };
+		313DE90C235457320095D22C /* blaster-firing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 313DE906235457320095D22C /* blaster-firing.wav */; };
+		313DE90D235457320095D22C /* swvader02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 313DE907235457320095D22C /* swvader02.wav */; };
+		313DE90E235457320095D22C /* swvader03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 313DE908235457320095D22C /* swvader03.wav */; };
+		313DE90F235457320095D22C /* Lightsaber Turn On.wav in Resources */ = {isa = PBXBuildFile; fileRef = 313DE909235457320095D22C /* Lightsaber Turn On.wav */; };
+		313DE910235457320095D22C /* R2D2-yeah.wav in Resources */ = {isa = PBXBuildFile; fileRef = 313DE90A235457320095D22C /* R2D2-yeah.wav */; };
 		317606A8234F90860088C065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606A7234F90860088C065 /* AppDelegate.swift */; };
 		317606AA234F90860088C065 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606A9234F90860088C065 /* SceneDelegate.swift */; };
 		317606AC234F90860088C065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606AB234F90860088C065 /* ViewController.swift */; };
@@ -42,6 +49,13 @@
 
 /* Begin PBXFileReference section */
 		0016BDABC2B35F15B7269479 /* Pods_NewsReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		313DE902235457060095D22C /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		313DE905235457320095D22C /* yodalaughing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yodalaughing.wav; sourceTree = "<group>"; };
+		313DE906235457320095D22C /* blaster-firing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "blaster-firing.wav"; sourceTree = "<group>"; };
+		313DE907235457320095D22C /* swvader02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swvader02.wav; sourceTree = "<group>"; };
+		313DE908235457320095D22C /* swvader03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swvader03.wav; sourceTree = "<group>"; };
+		313DE909235457320095D22C /* Lightsaber Turn On.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Lightsaber Turn On.wav"; sourceTree = "<group>"; };
+		313DE90A235457320095D22C /* R2D2-yeah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "R2D2-yeah.wav"; sourceTree = "<group>"; };
 		317606A4234F90860088C065 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317606A7234F90860088C065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317606A9234F90860088C065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,10 +124,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		313DE901235457060095D22C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				313DE902235457060095D22C /* Starjedi.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		313DE904235457320095D22C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				313DE905235457320095D22C /* yodalaughing.wav */,
+				313DE906235457320095D22C /* blaster-firing.wav */,
+				313DE907235457320095D22C /* swvader02.wav */,
+				313DE908235457320095D22C /* swvader03.wav */,
+				313DE909235457320095D22C /* Lightsaber Turn On.wav */,
+				313DE90A235457320095D22C /* R2D2-yeah.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		3176069B234F90850088C065 = {
 			isa = PBXGroup;
 			children = (
 				317606D7234F92370088C065 /* TableViewController.swift */,
+				313DE904235457320095D22C /* Sounds */,
+				313DE901235457060095D22C /* Fonts */,
 				317606A6234F90860088C065 /* NewsReader */,
 				317606BD234F90870088C065 /* NewsReaderTests */,
 				317606C8234F90870088C065 /* NewsReaderUITests */,
@@ -287,9 +324,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				317606B4234F90870088C065 /* LaunchScreen.storyboard in Resources */,
+				313DE90E235457320095D22C /* swvader03.wav in Resources */,
 				317606DC234F9A580088C065 /* TableViewCell.xib in Resources */,
 				317606B1234F90870088C065 /* Assets.xcassets in Resources */,
+				313DE910235457320095D22C /* R2D2-yeah.wav in Resources */,
+				313DE903235457060095D22C /* Starjedi.ttf in Resources */,
+				313DE90F235457320095D22C /* Lightsaber Turn On.wav in Resources */,
+				313DE90B235457320095D22C /* yodalaughing.wav in Resources */,
+				313DE90C235457320095D22C /* blaster-firing.wav in Resources */,
 				317606AF234F90860088C065 /* Main.storyboard in Resources */,
+				313DE90D235457320095D22C /* swvader02.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

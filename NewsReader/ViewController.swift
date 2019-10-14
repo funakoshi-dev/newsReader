@@ -30,13 +30,26 @@ class ViewController:ButtonBarPagerTabStripViewController
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         var viewControllers:[UIViewController] = []
-        let vc1 = TableViewController(style: .plain, itemInfo: "メニュー1")
+//        let vc1 = TableViewController(style: .plain, itemInfo: "メニュー1")
+//        viewControllers.append(vc1)
+//        let vc2 = TableViewController(style: .plain, itemInfo: "メニュー2")
+//        viewControllers.append(vc2)
+//        let vc3 = TableViewController(style: .plain, itemInfo: "メニュー3")
+//        viewControllers.append(vc3)
+//        let vc4 = TableViewController(style: .plain, itemInfo: "メニュー4")
+//        viewControllers.append(vc4)
+        
+        let vc1 = TableViewController(style: .plain, itemInfo: "News")
+        vc1.fetchFrom = "https://newsapi.org/v2/top-headlines?country=jp&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc1)
-        let vc2 = TableViewController(style: .plain, itemInfo: "メニュー2")
+        let vc2 = TableViewController(style: .plain, itemInfo: "StarWars")
+        vc2.fetchFrom = "https://newsapi.org/v2/everything?language=jp&q=starwars&sortBy=popularity&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc2)
-        let vc3 = TableViewController(style: .plain, itemInfo: "メニュー3")
+        let vc3 = TableViewController(style: .plain, itemInfo: "Apple")
+        vc3.fetchFrom = "https://newsapi.org/v2/everything?language=jp&q=apple&from=2019-10-13&to=2019-10-13&sortBy=popularity&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc3)
-        let vc4 = TableViewController(style: .plain, itemInfo: "メニュー4")
+        let vc4 = TableViewController(style: .plain, itemInfo: "Tech")
+        vc4.fetchFrom = "https://newsapi.org/v2/top-headlines?country=jp&category=technology&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc4)
         return viewControllers
     }

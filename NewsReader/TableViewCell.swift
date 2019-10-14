@@ -14,6 +14,8 @@ import OpenGraph
 
 class TableViewCell: UITableViewCell {
     
+    var swlogo = UIImage(named: "swlogo")
+    
     @IBOutlet weak var thumbnailImageView:
         UIImageView!
     
@@ -38,10 +40,10 @@ class TableViewCell: UITableViewCell {
             OpenGraph.fetch(url: URL(string: link)!) { result in
                 switch result {
                 case .success(let og):
-                  if let fetchUrl = og[.image] {
-                    let imageUrl = URL(string:(fetchUrl))
-                    self.setThumbnailWithFadeInAnimation(imageUrl: imageUrl)
-                  }
+                    if let fetchUrl = og[.image] {
+                        let imageUrl = URL(string:(fetchUrl))
+                        self.setThumbnailWithFadeInAnimation(imageUrl: imageUrl)
+                    }
                 case .failure(let error):
                     print(error.localizedDescription)
                 }

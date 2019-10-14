@@ -10,13 +10,14 @@ import UIKit
 import XLPagerTabStrip
 import Alamofire
 import SwiftyJSON
+import SafariServices
 
 class TableViewController: UITableViewController
 ,IndicatorInfoProvider
 {
     var itemInfo = IndicatorInfo(title: "View")
     // ニュースフィードRSS URL apiKey=の後にnewsapi.orgで作ったAPIKEY入れること。
-    var fetchFrom: String = "https://newsapi.org/v2/everything?language=jp&q=starwars&sortBy=popularity&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
+    var fetchFrom: String = "https://newsapi.org/v2/top-headlines?country=jp&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
     // ニュース記事の配列（中身はディクショナリ）
     var articles: [[String: String]] = []
 
@@ -36,7 +37,7 @@ class TableViewController: UITableViewController
     //-------------------------------
     // ニュースフィード取得
     //-------------------------------
-    func fetchNewsFeed(){
+    @objc func fetchNewsFeed(){
         Alamofire.request(fetchFrom).responseJSON { response in
             let json = JSON(response.result.value as Any)
             json["articles"].forEach{(_, data) in
@@ -50,6 +51,7 @@ class TableViewController: UITableViewController
                 print("articles:\(self.articles)")
 //ニュース記事をTableViewに表示させるためにはニュース記事を取得完了時に表示するよう指示
                 self.tableView.reloadData()
+                self.refreshControl!.endRefreshing()
             }
         }
     }
@@ -63,6 +65,12 @@ class TableViewController: UITableViewController
         fetchNewsFeed()
         // カスタムセル登録
         self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
+        // 下スワイプで記事再取得・更新
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "update")
+        self.refreshControl?.addTarget(self, action: #selector(TableViewController.fetchNewsFeed), for: UIControl.Event.valueChanged)
+        self.tableView.addSubview(refreshControl!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -99,6 +107,25 @@ class TableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    // セルタップ時の処理
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let svc = SFSafariViewController(url: URL(string: articles[indexPath.row]["link"]!)!)
+        self.present(svc, animated: true, completion: nil)
+        tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
