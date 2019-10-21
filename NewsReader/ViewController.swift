@@ -14,7 +14,7 @@ class ViewController:ButtonBarPagerTabStripViewController
 {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Pods ButtonBarPagerTabStripViewControllerの中のSettingsをいじっている。
         settings.style.buttonBarItemBackgroundColor = .black
         settings.style.buttonBarItemTitleColor = .white
         buttonBarView.backgroundColor = .black
@@ -22,11 +22,11 @@ class ViewController:ButtonBarPagerTabStripViewController
         buttonBarView.frame = CGRect(x: 0, y: 20, width: self.view.frame.width, height: 60)
         containerView.frame = CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height - 80)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+//    今はこのメソッドいらない
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+//    }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         var viewControllers:[UIViewController] = []
@@ -38,7 +38,6 @@ class ViewController:ButtonBarPagerTabStripViewController
 //        viewControllers.append(vc3)
 //        let vc4 = TableViewController(style: .plain, itemInfo: "メニュー4")
 //        viewControllers.append(vc4)
-        
         let vc1 = TableViewController(style: .plain, itemInfo: "News")
         vc1.fetchFrom = "https://newsapi.org/v2/top-headlines?country=jp&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc1)

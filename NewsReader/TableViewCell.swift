@@ -14,13 +14,11 @@ import OpenGraph
 
 class TableViewCell: UITableViewCell {
     
-    var swlogo = UIImage(named: "swlogo")
     
-    @IBOutlet weak var thumbnailImageView:
-        UIImageView!
     
-    @IBOutlet weak var titleLabel:
-        UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

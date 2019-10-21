@@ -7,17 +7,19 @@
 //
 
 import UIKit
+//Tab描写する用
 import XLPagerTabStrip
+//iOSのネットワーク通信処理をシンプルにする<->NSURLSession：バックグラウンドでは位置取得や音楽再生等限られた用途しか使用できませんでしたが、iOS7から通信処理にも利用できるようになりました。
 import Alamofire
 import SwiftyJSON
 import SafariServices
 
-class TableViewController: UITableViewController
-,IndicatorInfoProvider
-{
+class TableViewController: UITableViewController,IndicatorInfoProvider {
+
     var itemInfo = IndicatorInfo(title: "View")
     // ニュースフィードRSS URL apiKey=の後にnewsapi.orgで作ったAPIKEY入れること。
-    var fetchFrom: String = "https://newsapi.org/v2/top-headlines?country=jp&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
+    var fetchFrom: String = ""
+
     // ニュース記事の配列（中身はディクショナリ）
     var articles: [[String: String]] = []
 
@@ -60,17 +62,21 @@ class TableViewController: UITableViewController
     
     
     
+    fileprivate func addRefreshCtl() {
+        // 下スワイプで記事再取得・更新　定番の書き方
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "update")
+        self.refreshControl?.addTarget(self, action: #selector(TableViewController.fetchNewsFeed), for: UIControl.Event.valueChanged)
+        self.tableView.addSubview(refreshControl!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchNewsFeed()
         // カスタムセル登録
         self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         
-        // 下スワイプで記事再取得・更新
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl?.attributedTitle = NSAttributedString(string: "update")
-        self.refreshControl?.addTarget(self, action: #selector(TableViewController.fetchNewsFeed), for: UIControl.Event.valueChanged)
-        self.tableView.addSubview(refreshControl!)
+        addRefreshCtl()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -95,7 +101,6 @@ class TableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         // Configure the cell...
-        
         cell.titleLabel.text = articles[indexPath.row]["title"]! // ラベル表示
         cell.thumbnailImageView.image = UIImage() // 描画毎にサムネイルをクリア
         cell.link = articles[indexPath.row]["link"]!
