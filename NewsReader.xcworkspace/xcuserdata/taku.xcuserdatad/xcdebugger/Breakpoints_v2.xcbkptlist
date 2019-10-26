@@ -3,4 +3,54 @@
    uuid = "F52BAC91-9AC1-4AF7-BCB1-79D9E857B0AF"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24160BD6-5CD1-4990-985E-CA0A38AC43A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsReader/TableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "setThumbnailWithFadeInAnimation(imageUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "24160BD6-5CD1-4990-985E-CA0A38AC43A2 - 7b97dbbfc134141e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in SW_NewsReader.TableViewCell.setThumbnailWithFadeInAnimation(imageUrl: Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()"
+                  moduleName = "SW NewsReader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/taku/Desktop/Coding/Swift/mywork/NewsReader/NewsReader/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "24160BD6-5CD1-4990-985E-CA0A38AC43A2 - 4da8455a4a9bd164"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in SW_NewsReader.TableViewCell.setThumbnailWithFadeInAnimation(imageUrl: Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()"
+                  moduleName = "SW NewsReader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/taku/Desktop/Coding/Swift/mywork/NewsReader/NewsReader/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

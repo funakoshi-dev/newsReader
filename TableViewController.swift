@@ -13,11 +13,12 @@ import XLPagerTabStrip
 import Alamofire
 import SwiftyJSON
 import SafariServices
+import SkeletonView
 
 class TableViewController: UITableViewController,IndicatorInfoProvider {
 
     var itemInfo = IndicatorInfo(title: "View")
-    // ニュースフィードRSS URL apiKey=の後にnewsapi.orgで作ったAPIKEY入れること。
+    
     var fetchFrom: String = ""
 
     // ニュース記事の配列（中身はディクショナリ）
@@ -104,7 +105,6 @@ class TableViewController: UITableViewController,IndicatorInfoProvider {
         cell.titleLabel.text = articles[indexPath.row]["title"]! // ラベル表示
         cell.thumbnailImageView.image = UIImage() // 描画毎にサムネイルをクリア
         cell.link = articles[indexPath.row]["link"]!
-        
         return cell
     }
 

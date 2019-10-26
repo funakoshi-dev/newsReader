@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import SkeletonView
 
 //class ViewController: UIViewController {
 class ViewController:ButtonBarPagerTabStripViewController
@@ -21,6 +22,7 @@ class ViewController:ButtonBarPagerTabStripViewController
         buttonBarView.selectedBar.backgroundColor = UIColor(red:0.10, green:0.46, blue:0.82, alpha:1.0)
         buttonBarView.frame = CGRect(x: 0, y: 20, width: self.view.frame.width, height: 60)
         containerView.frame = CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height - 80)
+        
     }
 //    今はこのメソッドいらない
 //    override func didReceiveMemoryWarning() {
@@ -30,17 +32,11 @@ class ViewController:ButtonBarPagerTabStripViewController
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         var viewControllers:[UIViewController] = []
-//        let vc1 = TableViewController(style: .plain, itemInfo: "メニュー1")
-//        viewControllers.append(vc1)
-//        let vc2 = TableViewController(style: .plain, itemInfo: "メニュー2")
-//        viewControllers.append(vc2)
-//        let vc3 = TableViewController(style: .plain, itemInfo: "メニュー3")
-//        viewControllers.append(vc3)
-//        let vc4 = TableViewController(style: .plain, itemInfo: "メニュー4")
-//        viewControllers.append(vc4)
+
         let vc1 = TableViewController(style: .plain, itemInfo: "News")
         vc1.fetchFrom = "https://newsapi.org/v2/top-headlines?country=jp&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc1)
+        
         let vc2 = TableViewController(style: .plain, itemInfo: "StarWars")
         vc2.fetchFrom = "https://newsapi.org/v2/everything?language=jp&q=starwars&sortBy=popularity&apiKey=21ed0d2a74c8405091e0bcc7dae92cd5"
         viewControllers.append(vc2)

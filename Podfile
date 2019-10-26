@@ -10,6 +10,10 @@ target 'NewsReader' do
   pod 'XLPagerTabStrip'
   pod 'SDWebImage', '~>3.8'
   pod 'OpenGraph'
+  pod 'SkeletonView'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 
   # Pods for NewsReader
 
