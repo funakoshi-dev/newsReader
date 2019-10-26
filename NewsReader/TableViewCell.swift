@@ -23,8 +23,9 @@ class TableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+//      サムネイルをスケルトンで表示
         thumbnailImageView.showAnimatedGradientSkeleton()
-        
+//      2秒後スケルトン解除。
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
             self.thumbnailImageView.hideSkeleton()
         }
@@ -47,11 +48,9 @@ class TableViewCell: UITableViewCell {
                         if let fetchUrl = og[.image] {
                             let imageUrl = URL(string:(fetchUrl))
                             self.setThumbnailWithFadeInAnimation(imageUrl: imageUrl)
-                            
                         }
                     case .failure(let error):
                         print(error.localizedDescription)
-                        
                 }
             }
         }

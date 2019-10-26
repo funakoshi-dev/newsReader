@@ -26,6 +26,9 @@
 		317606D8234F92370088C065 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606D7234F92370088C065 /* TableViewController.swift */; };
 		317606DB234F9A580088C065 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606D9234F9A580088C065 /* TableViewCell.swift */; };
 		317606DC234F9A580088C065 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317606DA234F9A580088C065 /* TableViewCell.xib */; };
+		3181A65C23640B3700B300CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3181A65B23640B3700B300CD /* GoogleService-Info.plist */; };
+		3181A65D23640B3700B300CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3181A65B23640B3700B300CD /* GoogleService-Info.plist */; };
+		3181A65E23640B3700B300CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3181A65B23640B3700B300CD /* GoogleService-Info.plist */; };
 		7C3FD9ED0CE04943D7F28920 /* Pods_NewsReader_NewsReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AC1CC4B4FDEE2686E7FE51 /* Pods_NewsReader_NewsReaderUITests.framework */; };
 		C16FE871102B3DB278BCFB78 /* Pods_NewsReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0016BDABC2B35F15B7269479 /* Pods_NewsReaderTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +76,8 @@
 		317606D7234F92370088C065 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		317606D9234F9A580088C065 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		317606DA234F9A580088C065 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		3181A65B23640B3700B300CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3181A65F2364383200B300CD /* SW NewsReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SW NewsReader.entitlements"; sourceTree = "<group>"; };
 		357D04A9FAED2C8880715C91 /* Pods-NewsReader-NewsReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReader-NewsReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewsReader-NewsReaderUITests/Pods-NewsReader-NewsReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62FAE8013F24BA0FE735A2E5 /* Pods-NewsReader-NewsReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReader-NewsReaderUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsReader-NewsReaderUITests/Pods-NewsReader-NewsReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69AC1CC4B4FDEE2686E7FE51 /* Pods_NewsReader_NewsReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsReader_NewsReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,9 +178,11 @@
 		317606A6234F90860088C065 /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				3181A65F2364383200B300CD /* SW NewsReader.entitlements */,
 				317606A7234F90860088C065 /* AppDelegate.swift */,
 				317606A9234F90860088C065 /* SceneDelegate.swift */,
 				317606AB234F90860088C065 /* ViewController.swift */,
+				3181A65B23640B3700B300CD /* GoogleService-Info.plist */,
 				317606AD234F90860088C065 /* Main.storyboard */,
 				317606B0234F90870088C065 /* Assets.xcassets */,
 				317606B2234F90870088C065 /* LaunchScreen.storyboard */,
@@ -328,6 +335,7 @@
 				317606DC234F9A580088C065 /* TableViewCell.xib in Resources */,
 				317606B1234F90870088C065 /* Assets.xcassets in Resources */,
 				313DE910235457320095D22C /* R2D2-yeah.wav in Resources */,
+				3181A65C23640B3700B300CD /* GoogleService-Info.plist in Resources */,
 				313DE903235457060095D22C /* Starjedi.ttf in Resources */,
 				313DE90F235457320095D22C /* Lightsaber Turn On.wav in Resources */,
 				313DE90B235457320095D22C /* yodalaughing.wav in Resources */,
@@ -341,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3181A65D23640B3700B300CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3181A65E23640B3700B300CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +649,7 @@
 			baseConfigurationReference = FA7E4792A1636F30BF3E70D3 /* Pods-NewsReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NewsReader/SW NewsReader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F97L4V4B8X;
 				INFOPLIST_FILE = NewsReader/Info.plist;
@@ -658,6 +669,7 @@
 			baseConfigurationReference = 882E31E44B476726C2E67049 /* Pods-NewsReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NewsReader/SW NewsReader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F97L4V4B8X;
 				INFOPLIST_FILE = NewsReader/Info.plist;

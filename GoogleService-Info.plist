@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>587438942196-t7fp59s0hg42hbifnsjdr0oah6rtmhkr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.587438942196-t7fp59s0hg42hbifnsjdr0oah6rtmhkr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB6A1NdsDhcVu-K_Gy3PDHoq1JV54M3JFw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>587438942196</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tokyo.gsacademy.NewsReader</string>
+	<key>PROJECT_ID</key>
+	<string>notificationtrial-89919</string>
+	<key>STORAGE_BUCKET</key>
+	<string>notificationtrial-89919.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:587438942196:ios:55de9044af73421d0dfba1</string>
+	<key>DATABASE_URL</key>
+	<string>https://notificationtrial-89919.firebaseio.com</string>
+</dict>
+</plist>
